@@ -1,0 +1,16 @@
+NET "clk" LOC = "P44";
+NET "reset" LOC = "P30";
+NET "rx_serial" LOC = "P18";
+//NET "load" LOC = "P19";
+//NET "busy" LOC = "P20";
+
+NET "anode_ones" LOC = "P42";
+NET "anode_tens" LOC = "P23";
+
+NET "display_output<6>" LOC = "P14";
+NET "display_output<5>" LOC = "P16";
+NET "display_output<4>" LOC = "P33";
+NET "display_output<3>" LOC = "P34";
+NET "display_output<2>" LOC = "P36";
+NET "display_output<1>" LOC = "P6";
+NET "display_output<0>" LOC = "P5";

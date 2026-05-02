@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : shift_register_1.vf
+// /___/   /\     Timestamp : 03/10/2026 05:34:17
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family xbr -verilog /home/ise/Downloads/Xilinx_Electronics_Project/test/shift_register_1.vf -w /home/ise/Downloads/kx_group/kx_group/shift_register_1.sch
+//Design Name: shift_register_1
+//Device: xbr
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module SR8CE_MXILINX_shift_register_1(C, 
+                                      CE, 
+                                      CLR, 
+                                      SLI, 
+                                      Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input SLI;
+   output [7:0] Q;
+   
+   wire [7:0] Q_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   FDCE #( .INIT(1'b0) ) Q0 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(SLI), 
+            .Q(Q_DUMMY[0]));
+   FDCE #( .INIT(1'b0) ) Q1 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(Q_DUMMY[0]), 
+            .Q(Q_DUMMY[1]));
+   FDCE #( .INIT(1'b0) ) Q2 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(Q_DUMMY[1]), 
+            .Q(Q_DUMMY[2]));
+   FDCE #( .INIT(1'b0) ) Q3 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(Q_DUMMY[2]), 
+            .Q(Q_DUMMY[3]));
+   FDCE #( .INIT(1'b0) ) Q4 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(Q_DUMMY[3]), 
+            .Q(Q_DUMMY[4]));
+   FDCE #( .INIT(1'b0) ) Q5 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(Q_DUMMY[4]), 
+            .Q(Q_DUMMY[5]));
+   FDCE #( .INIT(1'b0) ) Q6 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(Q_DUMMY[5]), 
+            .Q(Q_DUMMY[6]));
+   FDCE #( .INIT(1'b0) ) Q7 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(Q_DUMMY[6]), 
+            .Q(Q_DUMMY[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module shift_register_1(CE, 
+                        Clear, 
+                        Clock, 
+                        Serial_Data_In, 
+                        Q);
+
+    input CE;
+    input Clear;
+    input Clock;
+    input Serial_Data_In;
+   output [7:0] Q;
+   
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   SR8CE_MXILINX_shift_register_1  XLXI_1 (.C(Clock), 
+                                          .CE(CE), 
+                                          .CLR(Clear), 
+                                          .SLI(Serial_Data_In), 
+                                          .Q(Q[7:0]));
+endmodule
